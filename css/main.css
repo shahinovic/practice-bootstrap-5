@@ -94,4 +94,21 @@ button.close {
 }
 .services .box:hover > * {
   color: #fff !important;
+}
+
+.slider-div {
+  background: url(../img/testimonials-bg.jpg) center center/cover;
+}
+.slider-div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.slider-div #carouselExampleCaptions {
+  height: 350px;
+}
+.slider-div .carousel-item img {
+  width: 250px;
+  height: 250px;
 }/*# sourceMappingURL=main.css.map */

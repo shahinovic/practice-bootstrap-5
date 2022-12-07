@@ -114,3 +114,20 @@ button.close {
     }
   }
 }
+
+.slider-div {
+  background: url(../img/testimonials-bg.jpg) center center/cover;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: transparentize($color: #000000, $amount: 0.3);
+  }
+  #carouselExampleCaptions {
+    height: 350px;
+  }
+  .carousel-item img {
+    width: 250px;
+    height: 250px;
+  }
+}

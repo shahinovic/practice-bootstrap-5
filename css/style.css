@@ -11019,4 +11019,24 @@ button.close {
 
 .services .box .box-overlay {
   inset: 0;
+}
+.services .box > * {
+  position: relative;
+  transition: 0.5s ease;
+}
+.services .box:hover .box-overlay {
+  top: 0 !important;
+}
+.services .box:hover > * {
+  color: #fff !important;
+}
+
+.slider-div {
+  background: url(../img/testimonials-bg.jpg) center center/cover;
+}
+.slider-div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }/*# sourceMappingURL=style.css.map */
