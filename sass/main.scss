@@ -1,0 +1,116 @@
+@import './variables';
+
+body {
+  font-family: 'Lemon', cursive;
+}
+
+// start utilities
+
+.bg-section {
+  background-color: #f6f9fe;
+  & .title-before {
+    background: #e7f1fd;
+    width: fit-content;
+  }
+}
+
+// end utilities
+
+.navbar-light {
+  .navbar-nav .nav-link {
+    position: relative;
+    transition: 0.3s ease;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      background-color: $blue;
+      transition: inherit;
+    }
+    &.active,
+    &:hover {
+      color: $blue;
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+}
+
+#header {
+  height: 75vh;
+  background: url(../img/hero-bg.jpg) center center/cover;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: transparentize($color: #fff, $amount: 0.3);
+  }
+}
+
+button.close {
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+// start modal
+
+#videoModal {
+  .modal-content {
+    background-color: transparent;
+  }
+  object {
+    height: 80vh;
+  }
+  &.fade .modal-dialog {
+    transition: transform 0.5s ease-out;
+    transform: scale(0);
+  }
+  &.show .modal-dialog {
+    transform: none;
+  }
+}
+// end modal
+
+// start about
+.icon-container {
+  width: 70px;
+  height: 70px;
+}
+
+// end about
+
+.progress-bar {
+  transition: 0.5s ease;
+}
+
+.counter-div .icon {
+  width: 60px;
+  height: 60px;
+}
+
+.services .box {
+  .box-overlay {
+    inset: 0;
+  }
+  & > * {
+    position: relative;
+    transition: 0.5s ease;
+  }
+  &:hover {
+    .box-overlay {
+      top: 0 !important;
+    }
+    > * {
+      color: #fff !important;
+    }
+  }
+}
