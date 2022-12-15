@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Lemon', cursive;
+  overflow-x: hidden;
 }
 
 // start utilities
@@ -129,5 +130,52 @@ button.close {
   .carousel-item img {
     width: 250px;
     height: 250px;
+  }
+}
+
+.list-group {
+  li {
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+.filter-items {
+  > a {
+    height: 350px;
+    img {
+      object-fit: contain;
+    }
+    &.active {
+      display: block;
+      animation: show 0.8s ease;
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+.footer-list li {
+  position: relative;
+  margin-top: 10px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border: 10px solid transparent;
+    border-left-color: $blue;
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
   }
 }

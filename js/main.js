@@ -45,3 +45,33 @@ window.addEventListener('scroll', () => {
     });
   }
 });
+
+const filterItems = document.querySelectorAll('.list-group li'),
+  listItems = document.querySelectorAll('.filter-items a'),
+  filtration = (item) => {
+    item.addEventListener('click', () => {
+      document.querySelector('.list-group li.active').classList.remove('active');
+      item.classList.add('active');
+      let filteredValue = item.dataset.filter;
+      let filter = (listItem) => {
+        if (listItem.classList.contains(filteredValue)) {
+          listItem.classList.remove('hidden');
+          listItem.classList.add('active');
+        } else {
+          listItem.classList.remove('active');
+          listItem.classList.add('hidden');
+        }
+      };
+      listItems.forEach(filter);
+    });
+  };
+
+filterItems.forEach(filtration);
+
+// lightgallery
+
+lightGallery(document.getElementById('lightgallery'), {});
+
+// aos init
+
+AOS.init();

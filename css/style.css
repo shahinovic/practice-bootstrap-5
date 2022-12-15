@@ -10935,6 +10935,7 @@ textarea.form-control-lg {
 }
 body {
   font-family: "Lemon", cursive;
+  overflow-x: hidden;
 }
 
 .bg-section {
@@ -11039,4 +11040,67 @@ button.close {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.7);
+}
+.slider-div #carouselExampleCaptions {
+  height: 350px;
+}
+.slider-div .carousel-item img {
+  width: 250px;
+  height: 250px;
+}
+
+.list-group li {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.filter-items > a {
+  height: 350px;
+}
+.filter-items > a img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.filter-items > a.active {
+  display: block;
+  -webkit-animation: show 0.8s ease;
+          animation: show 0.8s ease;
+}
+.filter-items > a.hidden {
+  display: none;
+}
+
+.footer-list li {
+  position: relative;
+  margin-top: 10px;
+}
+.footer-list li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border: 10px solid transparent;
+  border-left-color: #106eea;
+}
+
+@-webkit-keyframes show {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=style.css.map */
