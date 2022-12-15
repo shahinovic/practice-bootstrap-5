@@ -1,5 +1,8 @@
 body {
   font-family: "Lemon", cursive;
+}
+
+section {
   overflow-x: hidden;
 }
 
